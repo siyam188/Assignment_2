@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cocktail Drinks</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>🍹 Cocktail Drinks</h1>
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search drink..."
+      />
+      <button id="searchBtn">Search</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Drink Cards -->
+    <section>
+      <h2>Drinks</h2>
+
+      <div id="loading" class="message">Loading...</div>
+
+      <div id="drinkContainer" class="drink-container"></div>
+
+      <div id="notFound" class="message hidden">
+        No drinks found!
+      </div>
+    </section>
+
+    <!-- Group Section -->
+    <aside class="group-section">
+      <h2>
+        Selected Drinks
+        <span id="drinkCount">0</span>
+      </h2>
+
+      <div id="groupContainer">
+        <p class="empty">No drinks added yet.</p>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Details Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeModal" class="close">&times;</button>
+
+      <img id="modalImage" src="" alt="Drink" />
+
+      <h2 id="modalTitle"></h2>
+
+      <div class="modal-info">
+        <p><strong>Category:</strong> <span id="modalCategory"></span></p>
+        <p><strong>Glass:</strong> <span id="modalGlass"></span></p>
+        <p><strong>Alcoholic:</strong> <span id="modalAlcoholic"></span></p>
+        <p><strong>Instructions:</strong> <span id="modalInstructions"></span></p>
+        <p><strong>Ingredient 1:</strong> <span id="modalIngredient"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
